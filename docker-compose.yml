@@ -22,6 +22,6 @@ services:
       - "8001:8080"
     volumes:
       - ./frontend:/usr/src/frontend/
-      - ./frontend/node_modules
+      - /usr/src/frontend/node_modules
     depends_on:
       - backend
