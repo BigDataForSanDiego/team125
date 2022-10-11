@@ -1,9 +1,13 @@
-FROM node:lts-alpine3.15
+FROM node:lts-slim
 
 WORKDIR /usr/src/frontend
 
-COPY . . 
+COPY package*.json ./
 
-EXPOSE 8001
+RUN npm install
 
-CMD ["echo", "pre"]
+COPY . .
+
+EXPOSE 8080
+
+CMD ["npm", "run", "serve"]
