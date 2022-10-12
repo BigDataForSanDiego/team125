@@ -15,16 +15,18 @@
             class="nav-link"
             :class="{ active: _looking_for == 'medicine' }"
             @click="_setLookingFor('medicine')"
-            >Medicine</a
           >
+            Medicine
+          </a>
         </li>
         <li class="px-1 nav-item">
           <a
             class="nav-link"
             :class="{ active: _looking_for == 'services' }"
             @click="_setLookingFor('services')"
-            >Services</a
           >
+            Services
+          </a>
         </li>
       </ul>
 
@@ -80,8 +82,8 @@ export default {
       this.$router.push({
         path: "/listing",
         query: {
-          query_type: this._looking_for,
-          query: this.$refs.search.query,
+          search_type: this._looking_for,
+          search: this.$refs.search.search,
         },
       });
     },

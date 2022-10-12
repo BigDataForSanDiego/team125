@@ -3,10 +3,25 @@
     <Navbar />
 
     <div class="h-100 p-5 d-flex flex-column">
-      <div class="d-flex bd-highlight">
-        <div class="p-2 flex-grow-1 bd-highlight">Flex item</div>
-        <div class="p-2 bd-highlight">Flex item</div>
-        <div class="p-2 bd-highlight">Third flex item</div>
+      <div class="pt-4 d-flex">
+        <div class="flex-fill">
+          <h3 class="text-capitalize">
+            {{ this.$route.query.search }}
+          </h3>
+        </div>
+
+        <select class="form-select m-auto" style="max-width: 192px">
+          <option>Lowest price</option>
+          <option>Home delivery</option>
+        </select>
+      </div>
+      <hr />
+      <div class="flex-fill">
+        <div class="text-center">
+          <i class="bi bi-emoji-frown" style="font-size: 128px"></i>
+          <h1>Sorry, nothing found...</h1>
+          <h2>try searching for another name or variant</h2>
+        </div>
       </div>
     </div>
   </div>

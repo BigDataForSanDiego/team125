@@ -16,20 +16,20 @@ export default {
     search: {
       default: false,
     },
-    query_type: {
+    search_type: {
       default: "medicine",
     },
   },
   data: () => {
     return {
       _searching: false,
-      query: "",
+      search: "",
     };
   },
   methods: {
-    _onSearchInput: function (query) {
-      console.log(`Querying ${this.query_type} for '${query}'...`);
-      this.query = query;
+    _onSearchInput: function (search) {
+      console.log(`searching ${this.search_type} for '${search}'...`);
+      this.search = search;
     },
   },
 };

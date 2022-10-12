@@ -38,7 +38,7 @@
         >
           <i class="bi bi-search"></i>
         </button>
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select">
           <option>English</option>
           <option>Español</option>
         </select>
