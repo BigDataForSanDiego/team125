@@ -11,10 +11,20 @@
 
       <ul class="m-3 nav nav-pills justify-content-center">
         <li class="px-1 nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Medicine</a>
+          <a
+            class="nav-link"
+            :class="{ active: _looking_for == 'medicine' }"
+            @click="_setLookingFor('medicine')"
+            >Medicine</a
+          >
         </li>
         <li class="px-1 nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a
+            class="nav-link"
+            :class="{ active: _looking_for == 'services' }"
+            @click="_setLookingFor('services')"
+            >Services</a
+          >
         </li>
       </ul>
 
@@ -40,10 +50,24 @@ export default {
   components: {
     Navbar,
   },
+  data: function () {
+    return {
+      _looking_for: "medicine",
+    };
+  },
+  methods: {
+    _setLookingFor: function (looking_for) {
+      this._looking_for = looking_for;
+    },
+  },
 };
 </script>
 
 <style>
+.nav-link {
+  cursor: pointer;
+}
+
 @media (min-width: 576px) {
   .description,
   .search-input {
