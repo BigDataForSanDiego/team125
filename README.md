@@ -33,6 +33,12 @@ Requires [Docker](https://www.docker.com/)
 ### Build and run docker services
 > docker compose up --build -d
 
+### Frontend runs on:
+`localhost:8080`
+
+### Backend runs on:
+`localhost:8000`
+
 ## Commands
 
 ### List containers and status
@@ -46,3 +52,9 @@ Requires [Docker](https://www.docker.com/)
 
 ### Create and enter backend container
 > docker compose run backend bash
+
+### Stop docker services
+> docker compose stop
+
+### Stop and remove docker services
+> docker compose down
