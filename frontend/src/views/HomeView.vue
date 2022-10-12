@@ -1,27 +1,6 @@
 <template>
   <div class="home h-100">
-    <nav class="navbar navbar-light bg-light fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img
-            src="img/icons/favicon.svg"
-            alt=""
-            width="32"
-            height="32"
-            class="d-inline-block align-text-top"
-          />
-          <span class="text-success">Open</span>
-          <span class="text-danger">Heart</span>
-        </a>
-
-        <form class="d-flex">
-          <select class="form-select" aria-label="Default select example">
-            <option>English</option>
-            <option>Español</option>
-          </select>
-        </form>
-      </div>
-    </nav>
+    <Navbar />
 
     <div class="h-100 p-5 d-flex flex-column">
       <p class="mt-3 p-4 flex-fill text-center">
@@ -52,3 +31,14 @@
     </div>
   </div>
 </template>
+
+<script>
+import Navbar from "@/components/Navbar.vue";
+
+export default {
+  name: "HomeView",
+  components: {
+    Navbar,
+  },
+};
+</script>
