@@ -2,13 +2,7 @@
   <nav class="navbar navbar-light bg-light fixed-top">
     <div v-if="_searching" class="container-fluid">
       <div class="input-group">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Search"
-          aria-label="Search"
-          aria-describedby="Search"
-        />
+        <Search />
         <button class="btn btn-outline-success" type="button" id="Compare">
           Compare
         </button>
@@ -54,8 +48,13 @@
 </template>
 
 <script>
+import Search from "@/components/Search.vue";
+
 export default {
   name: "Navbar",
+  components: {
+    Search,
+  },
   props: {
     search: {
       default: true,
@@ -72,9 +71,6 @@ export default {
     },
     stopSearch: function () {
       this._searching = false;
-    },
-    enterSearch: function () {
-      console.log("Searching...");
     },
   },
 };

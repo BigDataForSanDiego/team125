@@ -28,15 +28,13 @@
         </li>
       </ul>
 
-      <div class="search-input input-group mb-3">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Search"
-          aria-label="Search"
-          aria-describedby="Search"
-        />
-        <button class="btn btn-outline-success" type="button" id="Search">Compare</button>
+      <div class="flex-fill">
+        <div class="search-input input-group mb-3">
+          <Search />
+          <button class="btn btn-outline-success" type="button" id="Search">
+            Compare
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -44,11 +42,13 @@
 
 <script>
 import Navbar from "@/components/Navbar.vue";
+import Search from "@/components/Search.vue";
 
 export default {
   name: "HomeView",
   components: {
     Navbar,
+    Search,
   },
   data: function () {
     return {
@@ -77,6 +77,7 @@ export default {
 }
 
 @media (min-width: 992px) {
+  .description,
   .search-input {
     width: 25%;
     margin: auto;
