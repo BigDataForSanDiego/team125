@@ -3,7 +3,7 @@
     <Navbar />
 
     <div class="h-100 p-5 d-flex flex-column">
-      <p class="mt-3 p-4 flex-fill text-center">
+      <p class="description mt-3 p-4 flex-fill text-center">
         A Progressive Web Application enabling individuals to compare cost of medication
         and medical services; while analyzing trends to improve decision making for the
         consumer and provider.
@@ -18,7 +18,7 @@
         </li>
       </ul>
 
-      <div class="input-group mb-3">
+      <div class="search-input input-group mb-3">
         <input
           type="text"
           class="form-control"
@@ -42,3 +42,20 @@ export default {
   },
 };
 </script>
+
+<style>
+@media (min-width: 576px) {
+  .description,
+  .search-input {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .search-input {
+    width: 25%;
+    margin: auto;
+  }
+}
+</style>
