@@ -5,6 +5,7 @@
     placeholder="Search"
     aria-label="Search"
     aria-describedby="Search"
+    @input="_onSearchInput($event.target.value)"
   />
 </template>
 
@@ -15,12 +16,19 @@ export default {
     search: {
       default: false,
     },
+    query_type: {
+      default: "medicine",
+    },
   },
   data: () => {
     return {
       _searching: false,
     };
   },
-  methods: {},
+  methods: {
+    _onSearchInput: function (query_string) {
+      console.log(`Querying ${this.query_type} for '${query_string}'...`);
+    },
+  },
 };
 </script>
