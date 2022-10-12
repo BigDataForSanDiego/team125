@@ -18,7 +18,7 @@
           id="Cancel"
           @click="stopSearch"
         >
-          X
+          <i class="bi bi-x"></i>
         </button>
       </div>
     </div>
@@ -42,7 +42,7 @@
           class="px-3 mx-1 btn rounded-circle"
           @click="startSearch"
         >
-          S
+          <i class="bi bi-search"></i>
         </button>
         <select class="form-select" aria-label="Default select example">
           <option>English</option>
