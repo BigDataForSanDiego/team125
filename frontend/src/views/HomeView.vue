@@ -30,8 +30,13 @@
 
       <div class="flex-fill">
         <div class="search-input input-group mb-3">
-          <Search />
-          <button class="btn btn-outline-success" type="button" id="Search">
+          <Search ref="search" />
+          <button
+            class="btn btn-outline-success"
+            type="button"
+            id="Search"
+            @click="_onCompareClick"
+          >
             Compare
           </button>
         </div>
@@ -70,6 +75,15 @@ export default {
   methods: {
     _setLookingFor: function (looking_for) {
       this._looking_for = looking_for;
+    },
+    _onCompareClick: function () {
+      this.$router.push({
+        path: "/listing",
+        query: {
+          query_type: this._looking_for,
+          query: this.$refs.search.query,
+        },
+      });
     },
   },
 };

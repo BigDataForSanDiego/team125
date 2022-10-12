@@ -23,11 +23,13 @@ export default {
   data: () => {
     return {
       _searching: false,
+      query: "",
     };
   },
   methods: {
-    _onSearchInput: function (query_string) {
-      console.log(`Querying ${this.query_type} for '${query_string}'...`);
+    _onSearchInput: function (query) {
+      console.log(`Querying ${this.query_type} for '${query}'...`);
+      this.query = query;
     },
   },
 };
