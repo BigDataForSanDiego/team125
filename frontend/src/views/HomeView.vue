@@ -36,6 +36,18 @@
           </button>
         </div>
       </div>
+
+      <p class="text-center">
+        <a
+          class="btn"
+          href="https://github.com/BigDataForSanDiego/team125#2022-big-data-hackathon-proposal-form"
+          role="button"
+          >ABOUT US</a
+        >
+        <a class="btn" href="https://github.com/BigDataForSanDiego/team125" role="button">
+          <i class="bi bi-github"></i>
+        </a>
+      </p>
     </div>
   </div>
 </template>
