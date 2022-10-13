@@ -1,0 +1,82 @@
+[
+  {
+     "id":1,
+     "name":"atorvastatin (generic Lipitor)",
+     "slug_name":"atorvastatin"
+  },
+  {
+     "id":2,
+     "name":"amoxicillin",
+     "slug_name":"amoxicillin"
+  },
+  {
+     "id":3,
+     "name":"alprazolam (generic Xanax)",
+     "slug_name":"alprazolam"
+  },
+  {
+     "id":4,
+     "name":"amphetamine salt combo (generic Adderall)",
+     "slug_name":"amphetamine-salt-combo"
+  },
+  {
+     "id":5,
+     "name":"amlodipine (generic Norvasc)",
+     "slug_name":"amlodipine"
+  },
+  {
+     "id":6,
+     "name":"Avc",
+     "slug_name":"avc"
+  },
+  {
+     "id":7,
+     "name":"Ayr",
+     "slug_name":"ayr"
+  },
+  {
+     "id":8,
+     "name":"Azo",
+     "slug_name":"azo"
+  },
+  {
+     "id":9,
+     "name":"omeprazole (generic Prilosec)",
+     "slug_name":"omeprazole"
+  },
+  {
+     "id":10,
+     "name":"omega-3-acid ethyl esters (generic Lovaza)",
+     "slug_name":"omega-3-acid-ethyl-esters"
+  },
+  {
+     "id":11,
+     "name":"omeprazole OTC (generic Prilosec OTC)",
+     "slug_name":"omeprazole-otc"
+  },
+  {
+     "id":12,
+     "name":"omeprazole / sodium bicarbonate (generic Zegerid)",
+     "slug_name":"omeprazole-sodium-bicarbonate"
+  },
+  {
+     "id":13,
+     "name":"Omeclamox-Pak",
+     "slug_name":"omeclamox-pak"
+  },
+  {
+     "id":14,
+     "name":"Onmel",
+     "slug_name":"onmel"
+  },
+  {
+     "id":15,
+     "name":"Riomet (metformin)",
+     "slug_name":"riomet"
+  },
+  {
+     "id":16,
+     "name":"Zometa (zoledronic acid)",
+     "slug_name":"zometa"
+  }
+]
