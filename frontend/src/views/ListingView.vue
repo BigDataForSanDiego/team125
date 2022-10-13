@@ -68,7 +68,9 @@
                   <div class="pb-2">
                     <i class="bi bi-currency-dollar"></i>{{ vendor.price }}
                   </div>
-                  <button type="button" class="btn btn-primary">See more</button>
+                  <button type="button" class="btn btn-primary" @click="_onResultClick">
+                    See more
+                  </button>
                 </div>
               </div>
             </div>
@@ -116,7 +118,17 @@ export default {
       this._loading = false;
     }, 3000);
   },
-  methods: {},
+  methods: {
+    _onResultClick: function () {
+      this.$router.push({
+        path: "/product",
+        query: {
+          search_type: this.$route.query.search_type,
+          vendor: "costco",
+        },
+      });
+    },
+  },
 };
 </script>
 
