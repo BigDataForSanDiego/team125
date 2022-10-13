@@ -1,0 +1,850 @@
+{
+    "atorvastatin": {
+      "name_id": "atorvastatin",
+      "name": "atorvastatin (generic Lipitor)",
+      "description": "Atorvastatin (Lipitor) is an inexpensive drug that lowers levels of cholesterol and triglycerides in the blood. Atorvastatin may also reduce the risk of heart attack or stroke in patients with risk factors for heart disease. This drug is more popular than comparable drugs. As of 2011, it is available in generic and brand versions. Generic atorvastatin is covered by most Medicare and insurance plans, but some pharmacy coupons or cash prices may be lower.",
+      "product_image": "https://www.grxstatic.com/d4fuqqd5l3dbz/products/cwf_tms/DrugItem_15029.PNG?width=256&quality=75",
+      "vendors": [
+        {
+          "id": 1,
+          "vendor_name": "DiRx",
+          "location": null,
+          "shipping": true,
+          "telephone": "877-367-3479",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/113468.png",
+          "price": 4
+        },
+        {
+          "id": 2,
+          "vendor_name": "HealthWarehouse",
+          "location": null,
+          "shipping": true,
+          "telephone": "1-800-748-7001",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31374.png",
+          "price": 6.6
+        },
+        {
+          "id": 3,
+          "vendor_name": "CVS Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-425-1910",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 30.26
+        },
+        {
+          "id": 4,
+          "vendor_name": "Costco",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": " +1 858-270-6920",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
+          "price": 14.99
+        },
+        {
+          "id": 5,
+          "vendor_name": "Vons Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-428-3311",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 7.95
+        }
+      ]
+    },
+    "amoxicillin": {
+      "name_id": "amoxicillin",
+      "name": "amoxicillin",
+      "description": "",
+      "product_image": "",
+      "vendors": [
+        {
+          "id": 1,
+          "vendor_name": "DiRx",
+          "location": null,
+          "shipping": true,
+          "telephone": "877-367-3479",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/113468.png",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "vendor_name": "HealthWarehouse",
+          "location": null,
+          "shipping": true,
+          "telephone": "1-800-748-7001",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31374.png",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "vendor_name": "CVS Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-425-1910",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        },
+        {
+          "id": 4,
+          "vendor_name": "Costco",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": " +1 858-270-6920",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
+          "price": 0
+        },
+        {
+          "id": 5,
+          "vendor_name": "Vons Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-428-3311",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        }
+      ]
+    },
+    "alprazolam": {
+      "name_id": "alprazolam (generic Xanax)",
+      "name": "alprazolam",
+      "description": "",
+      "product_image": "",
+      "vendors": [
+        {
+          "id": 1,
+          "vendor_name": "DiRx",
+          "location": null,
+          "shipping": true,
+          "telephone": "877-367-3479",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/113468.png",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "vendor_name": "HealthWarehouse",
+          "location": null,
+          "shipping": true,
+          "telephone": "1-800-748-7001",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31374.png",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "vendor_name": "CVS Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-425-1910",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        },
+        {
+          "id": 4,
+          "vendor_name": "Costco",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": " +1 858-270-6920",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
+          "price": 0
+        },
+        {
+          "id": 5,
+          "vendor_name": "Vons Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-428-3311",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        }
+      ]
+    },
+    "amphetamine-salt": {
+      "name_id": "amphetamine-salt-combo",
+      "name": "amphetamine salt combo (generic Adderall)",
+      "description": "",
+      "product_image": "",
+      "vendors": [
+        {
+          "id": 1,
+          "vendor_name": "DiRx",
+          "location": null,
+          "shipping": true,
+          "telephone": "877-367-3479",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/113468.png",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "vendor_name": "HealthWarehouse",
+          "location": null,
+          "shipping": true,
+          "telephone": "1-800-748-7001",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31374.png",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "vendor_name": "CVS Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-425-1910",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        },
+        {
+          "id": 4,
+          "vendor_name": "Costco",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": " +1 858-270-6920",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
+          "price": 0
+        },
+        {
+          "id": 5,
+          "vendor_name": "Vons Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-428-3311",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        }
+      ]
+    },
+    "amlodipine": {
+      "name_id": "amlodipine",
+      "name": "amlodipine (generic Norvasc)",
+      "description": "",
+      "product_image": "",
+      "vendors": [
+        {
+          "id": 1,
+          "vendor_name": "DiRx",
+          "location": null,
+          "shipping": true,
+          "telephone": "877-367-3479",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/113468.png",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "vendor_name": "HealthWarehouse",
+          "location": null,
+          "shipping": true,
+          "telephone": "1-800-748-7001",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31374.png",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "vendor_name": "CVS Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-425-1910",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        },
+        {
+          "id": 4,
+          "vendor_name": "Costco",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": " +1 858-270-6920",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
+          "price": 0
+        },
+        {
+          "id": 5,
+          "vendor_name": "Vons Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-428-3311",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        }
+      ]
+    },
+    "avc": {
+      "name_id": "avc",
+      "name": "Avc",
+      "description": "",
+      "product_image": "",
+      "vendors": [
+        {
+          "id": 1,
+          "vendor_name": "DiRx",
+          "location": null,
+          "shipping": true,
+          "telephone": "877-367-3479",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/113468.png",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "vendor_name": "HealthWarehouse",
+          "location": null,
+          "shipping": true,
+          "telephone": "1-800-748-7001",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31374.png",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "vendor_name": "CVS Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-425-1910",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        },
+        {
+          "id": 4,
+          "vendor_name": "Costco",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": " +1 858-270-6920",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
+          "price": 0
+        },
+        {
+          "id": 5,
+          "vendor_name": "Vons Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-428-3311",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        }
+      ]
+    },
+    "ayr": {
+      "name_id": "ayr",
+      "name": "Ayr",
+      "description": "",
+      "product_image": "",
+      "vendors": [
+        {
+          "id": 1,
+          "vendor_name": "DiRx",
+          "location": null,
+          "shipping": true,
+          "telephone": "877-367-3479",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/113468.png",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "vendor_name": "HealthWarehouse",
+          "location": null,
+          "shipping": true,
+          "telephone": "1-800-748-7001",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31374.png",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "vendor_name": "CVS Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-425-1910",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        },
+        {
+          "id": 4,
+          "vendor_name": "Costco",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": " +1 858-270-6920",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
+          "price": 0
+        },
+        {
+          "id": 5,
+          "vendor_name": "Vons Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-428-3311",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        }
+      ]
+    },
+    "azo": {
+      "name_id": "azo",
+      "name": "Azo",
+      "description": "",
+      "product_image": "",
+      "vendors": [
+        {
+          "id": 1,
+          "vendor_name": "DiRx",
+          "location": null,
+          "shipping": true,
+          "telephone": "877-367-3479",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/113468.png",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "vendor_name": "HealthWarehouse",
+          "location": null,
+          "shipping": true,
+          "telephone": "1-800-748-7001",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31374.png",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "vendor_name": "CVS Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-425-1910",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        },
+        {
+          "id": 4,
+          "vendor_name": "Costco",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": " +1 858-270-6920",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
+          "price": 0
+        },
+        {
+          "id": 5,
+          "vendor_name": "Vons Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-428-3311",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        }
+      ]
+    },
+    "omeprazole": {
+      "name_id": "omeprazole",
+      "name": "omeprazole (generic Prilosec)",
+      "description": "",
+      "product_image": "",
+      "vendors": [
+        {
+          "id": 1,
+          "vendor_name": "DiRx",
+          "location": null,
+          "shipping": true,
+          "telephone": "877-367-3479",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/113468.png",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "vendor_name": "HealthWarehouse",
+          "location": null,
+          "shipping": true,
+          "telephone": "1-800-748-7001",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31374.png",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "vendor_name": "CVS Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-425-1910",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        },
+        {
+          "id": 4,
+          "vendor_name": "Costco",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": " +1 858-270-6920",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
+          "price": 0
+        },
+        {
+          "id": 5,
+          "vendor_name": "Vons Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-428-3311",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        }
+      ]
+    },
+    "omega-3": {
+      "name_id": "omega-3-acid-ethyl-esters",
+      "name": "omega-3-acid ethyl esters (generic Lovaza)",
+      "description": "",
+      "product_image": "",
+      "vendors": [
+        {
+          "id": 1,
+          "vendor_name": "DiRx",
+          "location": null,
+          "shipping": true,
+          "telephone": "877-367-3479",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/113468.png",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "vendor_name": "HealthWarehouse",
+          "location": null,
+          "shipping": true,
+          "telephone": "1-800-748-7001",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31374.png",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "vendor_name": "CVS Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-425-1910",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        },
+        {
+          "id": 4,
+          "vendor_name": "Costco",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": " +1 858-270-6920",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
+          "price": 0
+        },
+        {
+          "id": 5,
+          "vendor_name": "Vons Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-428-3311",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        }
+      ]
+    },
+    "omeprazole-otc": {
+      "name_id": "omeprazole-otc",
+      "name": "omeprazole OTC (generic Prilosec OTC)",
+      "description": "",
+      "product_image": "",
+      "vendors": [
+        {
+          "id": 1,
+          "vendor_name": "DiRx",
+          "location": null,
+          "shipping": true,
+          "telephone": "877-367-3479",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/113468.png",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "vendor_name": "HealthWarehouse",
+          "location": null,
+          "shipping": true,
+          "telephone": "1-800-748-7001",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31374.png",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "vendor_name": "CVS Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-425-1910",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        },
+        {
+          "id": 4,
+          "vendor_name": "Costco",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": " +1 858-270-6920",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
+          "price": 0
+        },
+        {
+          "id": 5,
+          "vendor_name": "Vons Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-428-3311",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        }
+      ]
+    },
+    "omeprazole-sodium": {
+      "name_id": "omeprazole-sodium-bicarbonate",
+      "name": "omeprazole / sodium bicarbonate (generic Zegerid)",
+      "description": "",
+      "product_image": "",
+      "vendors": [
+        {
+          "id": 1,
+          "vendor_name": "DiRx",
+          "location": null,
+          "shipping": true,
+          "telephone": "877-367-3479",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/113468.png",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "vendor_name": "HealthWarehouse",
+          "location": null,
+          "shipping": true,
+          "telephone": "1-800-748-7001",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31374.png",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "vendor_name": "CVS Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-425-1910",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        },
+        {
+          "id": 4,
+          "vendor_name": "Costco",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": " +1 858-270-6920",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
+          "price": 0
+        },
+        {
+          "id": 5,
+          "vendor_name": "Vons Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-428-3311",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        }
+      ]
+    },
+    "omeclamox-pak": {
+      "name_id": "omeclamox-pak",
+      "name": "Omeclamox-Pak",
+      "description": "",
+      "product_image": "",
+      "vendors": [
+        {
+          "id": 1,
+          "vendor_name": "DiRx",
+          "location": null,
+          "shipping": true,
+          "telephone": "877-367-3479",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/113468.png",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "vendor_name": "HealthWarehouse",
+          "location": null,
+          "shipping": true,
+          "telephone": "1-800-748-7001",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31374.png",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "vendor_name": "CVS Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-425-1910",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        },
+        {
+          "id": 4,
+          "vendor_name": "Costco",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": " +1 858-270-6920",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
+          "price": 0
+        },
+        {
+          "id": 5,
+          "vendor_name": "Vons Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-428-3311",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        }
+      ]
+    },
+    "onmel": {
+      "name_id": "onmel",
+      "name": "Onmel",
+      "description": "",
+      "product_image": "",
+      "vendors": [
+        {
+          "id": 1,
+          "vendor_name": "DiRx",
+          "location": null,
+          "shipping": true,
+          "telephone": "877-367-3479",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/113468.png",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "vendor_name": "HealthWarehouse",
+          "location": null,
+          "shipping": true,
+          "telephone": "1-800-748-7001",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31374.png",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "vendor_name": "CVS Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-425-1910",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        },
+        {
+          "id": 4,
+          "vendor_name": "Costco",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": " +1 858-270-6920",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
+          "price": 0
+        },
+        {
+          "id": 5,
+          "vendor_name": "Vons Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-428-3311",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        }
+      ]
+    },
+    "riomet": {
+      "name_id": "riomet",
+      "name": "Riomet (metformin)",
+      "description": "",
+      "product_image": "",
+      "vendors": [
+        {
+          "id": 1,
+          "vendor_name": "DiRx",
+          "location": null,
+          "shipping": true,
+          "telephone": "877-367-3479",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/113468.png",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "vendor_name": "HealthWarehouse",
+          "location": null,
+          "shipping": true,
+          "telephone": "1-800-748-7001",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31374.png",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "vendor_name": "CVS Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-425-1910",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        },
+        {
+          "id": 4,
+          "vendor_name": "Costco",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": " +1 858-270-6920",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
+          "price": 0
+        },
+        {
+          "id": 5,
+          "vendor_name": "Vons Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-428-3311",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        }
+      ]
+    },
+    "zometa": {
+      "name_id": "zometa",
+      "name": "Zometa (zoledronic acid)",
+      "description": "",
+      "product_image": "",
+      "vendors": [
+        {
+          "id": 1,
+          "vendor_name": "DiRx",
+          "location": null,
+          "shipping": true,
+          "telephone": "877-367-3479",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/113468.png",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "vendor_name": "HealthWarehouse",
+          "location": null,
+          "shipping": true,
+          "telephone": "1-800-748-7001",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31374.png",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "vendor_name": "CVS Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-425-1910",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        },
+        {
+          "id": 4,
+          "vendor_name": "Costco",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": " +1 858-270-6920",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
+          "price": 0
+        },
+        {
+          "id": 5,
+          "vendor_name": "Vons Pharmacy",
+          "location": "San Diego, California",
+          "shipping": false,
+          "telephone": "+1 619-428-3311",
+          "vendor_image": "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
+          "price": 0
+        }
+      ]
+    }
+  }
