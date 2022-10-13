@@ -15,12 +15,64 @@
           <option>Home delivery</option>
         </select>
       </div>
+
       <hr />
+
       <div class="flex-fill">
-        <div class="text-center">
-          <i class="bi bi-emoji-frown" style="font-size: 128px"></i>
-          <h1>Sorry, nothing found...</h1>
-          <h2>try searching for another name or variant</h2>
+        <div v-if="_loading" class="m-3 text-center">
+          <div class="spinner-border" style="width: 128px; height: 128px">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+
+        <div v-else>
+          <div v-if="result.length == 0" class="text-center">
+            <i class="bi bi-emoji-frown" style="font-size: 128px"></i>
+            <h1>Sorry, nothing found...</h1>
+            <h2>try searching for another name or variant</h2>
+          </div>
+
+          <div v-else>
+            <div v-for="vendor in result.vendors" class="card mb-3">
+              <div class="d-flex mx-3">
+                <div class="my-auto">
+                  <img
+                    :src="vendor.vendor_image"
+                    class="img-fluid rounded-start"
+                    alt=""
+                    width="64"
+                  />
+                </div>
+
+                <div class="flex-fill">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      {{ vendor.vendor_name }}
+                      <i v-if="vendor.vendor_delivery" class="bi bi-envelope-check"></i>
+                    </h5>
+                    <p class="card-text">
+                      {{ vendor.description }}
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted">
+                        <span v-if="vendor.contact_info.location != ''">
+                          <i class="bi bi-geo-alt"></i>
+                          {{ vendor.contact_info.location }}
+                        </span>
+                      </small>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="my-auto text-center">
+                  <div class="pb-2">
+                    <i class="bi bi-currency-dollar"></i>{{ vendor.price }}
+                  </div>
+                  <button type="button" class="btn btn-primary">See more</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -37,35 +89,35 @@ export default {
   },
   data: function () {
     return {
-      _looking_for: "medicine",
+      _loading: false,
+      result: {
+        name_id: "bupropion-xl",
+        name: "Bupropion XL",
+        description: "BUPROPION treats depression",
+        product_image: "img/icons/favicon.svg",
+        vendors: [
+          {
+            vendor_name_id: "costco",
+            vendor_name: "Costco",
+            contact_info: {
+              location: "San Diego, CA",
+              telephone: "+1 (619) 123-4567",
+            },
+            vendor_delivery: true,
+            vendor_image: "img/icons/favicon.svg",
+            price: 4.99,
+          },
+        ],
+      },
     };
   },
-  methods: {
-    _setLookingFor: function (looking_for) {
-      this._looking_for = looking_for;
-    },
+  mounted: function () {
+    setTimeout(() => {
+      this._loading = false;
+    }, 3000);
   },
+  methods: {},
 };
 </script>
 
-<style>
-.nav-link {
-  cursor: pointer;
-}
-
-@media (min-width: 576px) {
-  .description,
-  .search-input {
-    width: 50%;
-    margin: auto;
-  }
-}
-
-@media (min-width: 992px) {
-  .description,
-  .search-input {
-    width: 25%;
-    margin: auto;
-  }
-}
-</style>
+<style></style>
