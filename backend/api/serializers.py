@@ -22,13 +22,13 @@ class MedicineSerializer(serializers.ModelSerializer):
         )
 
 class MedicineSearchSerializer(serializers.ModelSerializer):
-    name_slug = serializers.SerializerMethodField()
+    slug_name = serializers.SerializerMethodField()
 
     class Meta:
         model = Medicine
         fields = ["name"]
     
-    def get_name_slug(self, obj):
+    def get_slug_name(self, obj):
         return slugify(obj.name)
 
 #### MEDICINE SEARCH SERIALIZER
