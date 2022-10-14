@@ -48,6 +48,7 @@
               <div class="d-flex mx-3">
                 <div class="my-auto">
                   <img
+                    v-if="vendor.vendor_image != ''"
                     :src="vendor.vendor_image"
                     class="img-fluid rounded-start"
                     alt=""
@@ -85,7 +86,7 @@
                     type="button"
                     class="btn btn-primary"
                     style="min-width: 95px"
-                    @click="_onResultClick"
+                    @click="_onResultClick(vendor.vendor_name)"
                   >
                     {{ _i18n("more") }}
                   </button>
@@ -122,21 +123,20 @@ export default {
     if (this.$route.query.search in this._session.medicines) {
       const medicine = this.$route.query.search;
 
-      console.log(this._session.medicines[medicine]);
-
       this.result = this._session.medicines[medicine];
     }
     setTimeout(() => {
       this._loading = false;
-    }, 1500);
+    }, 1000);
   },
   methods: {
-    _onResultClick: function () {
+    _onResultClick: function (vendor) {
       this.$router.push({
         path: "/product",
         query: {
           category: this.$route.query.category,
-          vendor: "costco",
+          search: this.$route.query.search,
+          vendor: vendor,
         },
       });
     },
