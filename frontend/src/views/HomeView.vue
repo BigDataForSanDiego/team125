@@ -38,6 +38,30 @@
             {{ _i18n("compare") }}
           </button>
         </div>
+
+        <div v-if="_looking_for == 'medicine'" class="text-center">
+          {{ _i18n("popular") }} <br />
+          <div class="m-1">
+            <button type="button" class="mx-1 btn btn-outline-primary bg-white btn-sm">
+              Omega-3
+            </button>
+            <button type="button" class="btn btn-outline-primary bg-white btn-sm">
+              Riomet
+            </button>
+          </div>
+        </div>
+
+        <div v-if="_looking_for == 'services'" class="text-center">
+          {{ _i18n("popular") }}
+          <div class="m-1">
+            <button type="button" class="mx-1 btn btn-outline-primary bg-white btn-sm">
+              {{ _i18n("covid") }}
+            </button>
+            <button type="button" class="btn btn-outline-primary bg-white btn-sm">
+              {{ _i18n("skin") }}
+            </button>
+          </div>
+        </div>
       </div>
 
       <p class="text-center">
@@ -98,6 +122,9 @@ export default {
           services: "Services",
           compare: "Compare",
           about: "ABOUT US",
+          popular: "Popular Searches:",
+          covid: "COVID-19 Test",
+          skin: "Skin Care",
         },
         spanish: {
           description:
@@ -106,6 +133,9 @@ export default {
           services: "Servicios",
           compare: "Comparar",
           about: "SOBRE NOSOTROS",
+          popular: "Búsquedas Populares:",
+          covid: "Prueba COVID-19",
+          skin: "Skin Care",
         },
       };
       return internationalization[this._session.language][i18n_id];
