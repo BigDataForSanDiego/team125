@@ -4,7 +4,7 @@
       <div class="input-group">
         <Search />
         <button class="btn btn-outline-success" type="button" id="Compare">
-          Compare
+          {{ _i18n("compare") }}
         </button>
         <button
           class="btn btn-outline-danger"
@@ -43,8 +43,12 @@
           id="language"
           @change="_onLanguageChange($event.target.value)"
         >
-          <option :selected="_session.language == 'English'">English</option>
-          <option :selected="_session.language == 'Español'">Español</option>
+          <option value="english" :selected="_session.language == 'english'">
+            English
+          </option>
+          <option value="spanish" :selected="_session.language == 'spanish'">
+            Español
+          </option>
         </select>
       </form>
     </div>
@@ -68,8 +72,9 @@ export default {
   },
   data: () => {
     return {
-      _session: Session,
       _searching: false,
+
+      _session: Session,
     };
   },
   methods: {
@@ -79,8 +84,21 @@ export default {
     stopSearch: function () {
       this._searching = false;
     },
+
     _onLanguageChange: function (language) {
       Session.set_language(language);
+    },
+
+    _i18n: function (i18n_id) {
+      const internationalization = {
+        english: {
+          compare: "Compare",
+        },
+        spanish: {
+          compare: "Comparar",
+        },
+      };
+      return internationalization[this._session.language][i18n_id];
     },
   },
 };
