@@ -2,9 +2,14 @@
   <nav class="navbar navbar-light bg-light fixed-top">
     <div v-if="_searching" class="container-fluid">
       <div class="input-group">
-        <Search />
-        <button class="btn btn-outline-success" type="button" id="Compare">
-          Compare
+        <SearchInput ref="searchinput" />
+        <button
+          class="btn btn-outline-success"
+          type="button"
+          id="Compare"
+          @click="_onCompareClick"
+        >
+          {{ _i18n("compare") }}
         </button>
         <button
           class="btn btn-outline-danger"
@@ -38,9 +43,17 @@
         >
           <i class="bi bi-search"></i>
         </button>
-        <select class="form-select">
-          <option>English</option>
-          <option>Español</option>
+        <select
+          class="form-select"
+          id="language"
+          @change="_onLanguageChange($event.target.value)"
+        >
+          <option value="english" :selected="_session.language == 'english'">
+            English
+          </option>
+          <option value="spanish" :selected="_session.language == 'spanish'">
+            Español
+          </option>
         </select>
       </form>
     </div>
@@ -48,12 +61,14 @@
 </template>
 
 <script>
-import Search from "@/components/Search.vue";
+import SearchInput from "@/components/SearchInput.vue";
+
+import Session from "@/core/session";
 
 export default {
   name: "Navbar",
   components: {
-    Search,
+    SearchInput,
   },
   props: {
     search: {
@@ -63,6 +78,8 @@ export default {
   data: () => {
     return {
       _searching: false,
+
+      _session: Session,
     };
   },
   methods: {
@@ -71,6 +88,29 @@ export default {
     },
     stopSearch: function () {
       this._searching = false;
+    },
+
+    _onCompareClick: function () {
+      this.$refs.searchinput.search(
+        this.$route.query.category,
+        this.$refs.searchinput.value
+      );
+    },
+    _onLanguageChange: function (language) {
+      Session.set_language(language);
+      location.reload();
+    },
+
+    _i18n: function (i18n_id) {
+      const internationalization = {
+        english: {
+          compare: "Compare",
+        },
+        spanish: {
+          compare: "Comparar",
+        },
+      };
+      return internationalization[this._session.language][i18n_id];
     },
   },
 };

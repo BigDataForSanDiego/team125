@@ -4,16 +4,23 @@
 
     <div class="h-100 p-5 d-flex flex-column">
       <div class="pt-4 d-flex">
-        <div class="flex-fill">
+        <div class="flex-fill mt-4">
           <h3 class="text-capitalize">
             {{ this.$route.query.search }}
           </h3>
         </div>
 
-        <select class="form-select m-auto" style="max-width: 192px">
-          <option>Lowest price</option>
-          <option>Home delivery</option>
-        </select>
+        <div class="m-auto">
+          {{ _i18n("sort") }}:
+          <select class="form-select" style="max-width: 192px">
+            <option value="lowest">
+              {{ _i18n("lowest") }}
+            </option>
+            <option value="home">
+              {{ _i18n("home") }}
+            </option>
+          </select>
+        </div>
       </div>
 
       <hr />
@@ -26,10 +33,14 @@
         </div>
 
         <div v-else>
-          <div v-if="result.length == 0" class="text-center">
+          <div v-if="result === null" class="text-center">
             <i class="bi bi-emoji-frown" style="font-size: 128px"></i>
-            <h1>Sorry, nothing found...</h1>
-            <h2>try searching for another name or variant</h2>
+            <h1>
+              {{ _i18n("sorry") }}
+            </h1>
+            <h2>
+              {{ _i18n("try") }}
+            </h2>
           </div>
 
           <div v-else>
@@ -41,12 +52,22 @@
                     class="img-fluid rounded-start"
                     alt=""
                     width="64"
+                    height="64"
+                    style="min-width: 64px"
                   />
                 </div>
 
                 <div class="flex-fill">
                   <div class="card-body">
-                    <h5 class="card-title">
+                    <h5
+                      class="card-title"
+                      style="
+                        white-space: nowrap;
+                        overflow: hidden;
+                        width: 100px;
+                        text-overflow: ellipsis;
+                      "
+                    >
                       {{ vendor.vendor_name }}
                       <i v-if="vendor.vendor_delivery" class="bi bi-envelope-check"></i>
                     </h5>
@@ -55,9 +76,9 @@
                     </p>
                     <p class="card-text">
                       <small class="text-muted">
-                        <span v-if="vendor.contact_info.location != ''">
+                        <span v-if="vendor.location != ''">
                           <i class="bi bi-geo-alt"></i>
-                          {{ vendor.contact_info.location }}
+                          {{ vendor.location || "San Diego" }}
                         </span>
                       </small>
                     </p>
@@ -68,8 +89,13 @@
                   <div class="pb-2">
                     <i class="bi bi-currency-dollar"></i>{{ vendor.price }}
                   </div>
-                  <button type="button" class="btn btn-primary" @click="_onResultClick">
-                    See more
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="min-width: 95px"
+                    @click="_onResultClick"
+                  >
+                    {{ _i18n("more") }}
                   </button>
                 </div>
               </div>
@@ -84,6 +110,8 @@
 <script>
 import Navbar from "@/components/Navbar.vue";
 
+import Session from "@/core/session";
+
 export default {
   name: "ListingView",
   components: {
@@ -91,42 +119,56 @@ export default {
   },
   data: function () {
     return {
-      _loading: false,
-      result: {
-        name_id: "bupropion-xl",
-        name: "Bupropion XL",
-        description: "BUPROPION treats depression",
-        product_image: "img/icons/favicon.svg",
-        vendors: [
-          {
-            vendor_name_id: "costco",
-            vendor_name: "Costco",
-            contact_info: {
-              location: "San Diego, CA",
-              telephone: "+1 (619) 123-4567",
-            },
-            vendor_delivery: true,
-            vendor_image: "img/icons/favicon.svg",
-            price: 4.99,
-          },
-        ],
-      },
+      result: null,
+
+      _loading: true,
+
+      _session: Session,
     };
   },
   mounted: function () {
+    if (this.$route.query.search in this._session.medicines) {
+      const medicine = this.$route.query.search;
+
+      console.log(this._session.medicines[medicine]);
+
+      this.result = this._session.medicines[medicine];
+    }
     setTimeout(() => {
       this._loading = false;
-    }, 3000);
+    }, 1500);
   },
   methods: {
     _onResultClick: function () {
       this.$router.push({
         path: "/product",
         query: {
-          search_type: this.$route.query.search_type,
+          category: this.$route.query.category,
           vendor: "costco",
         },
       });
+    },
+
+    _i18n: function (i18n_id) {
+      const internationalization = {
+        english: {
+          sort: "Sort by",
+          lowest: "Lowest price",
+          home: "Home delivery",
+          sorry: "Sorry, nothing found...",
+          try: "try searching for another name or variant",
+          more: "See more",
+        },
+        spanish: {
+          sort: "Ordenar por",
+          lowest: "Precio bajo",
+          home: "Entrega a domicilio",
+          sorry: "Lo siento, no se encontró nada...",
+          try: "intente buscar otro nombre o variante",
+          more: "Ver más",
+        },
+      };
+      return internationalization[this._session.language][i18n_id];
     },
   },
 };

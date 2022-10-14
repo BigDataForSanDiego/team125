@@ -1,8 +1,11 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import './registerServiceWorker'
-import router from './router'
+import { createApp } from "vue";
+import App from "./App.vue";
+import "./registerServiceWorker";
+import router from "./router";
 
-import 'bootstrap'
+import "bootstrap";
 
-createApp(App).use(router).mount('#app')
+import Session from "./core/session";
+window.Session = Session;
+
+createApp(App).use(router).mount("#app");
