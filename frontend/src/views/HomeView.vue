@@ -40,7 +40,7 @@
         <div class="search-input input-group mb-3">
           <Search ref="search" />
           <button
-            class="btn btn-outline-success"
+            class="btn btn-outline-success bg-white"
             type="button"
             id="Search"
             @click="_onCompareClick"
@@ -106,7 +106,7 @@ export default {
           },
         },
         opacity: {
-          value: 0.5,
+          value: 0.2,
           random: false,
           anim: {
             enable: false,
@@ -127,7 +127,7 @@ export default {
         },
         move: {
           enable: true,
-          speed: 6,
+          speed: 3,
           direction: "none",
           random: false,
           straight: false,
@@ -162,10 +162,6 @@ export default {
 <style>
 .nav-link {
   cursor: pointer;
-}
-
-* {
-  text-shadow: 0px 0px 1px;
 }
 
 @media (min-width: 576px) {
