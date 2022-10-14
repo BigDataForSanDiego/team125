@@ -28,11 +28,10 @@
 
       <div class="flex-fill">
         <div class="search-input input-group mb-3">
-          <Search ref="search" />
+          <SearchInput ref="searchinput" />
           <button
             class="btn btn-outline-success bg-white"
             type="button"
-            id="Search"
             @click="_onCompareClick"
           >
             {{ _i18n("compare") }}
@@ -98,7 +97,7 @@
 
 <script>
 import Navbar from "@/components/Navbar.vue";
-import Search from "@/components/Search.vue";
+import SearchInput from "@/components/SearchInput.vue";
 
 import Session from "@/core/session";
 
@@ -106,7 +105,7 @@ export default {
   name: "HomeView",
   components: {
     Navbar,
-    Search,
+    SearchInput,
   },
   data: function () {
     return {
@@ -117,20 +116,14 @@ export default {
   },
   methods: {
     search: function (category, search) {
-      this.$router.push({
-        path: "/listing",
-        query: {
-          category: category,
-          search: search,
-        },
-      });
+      this.$refs.searchinput.search(category, search);
     },
 
     _setLookingFor: function (looking_for) {
       this._category = looking_for;
     },
     _onCompareClick: function () {
-      this.searchMedicine(this._category, this.$refs.search.search);
+      this.search(this._category, this.$refs.searchinput.value);
     },
 
     _i18n: function (i18n_id) {

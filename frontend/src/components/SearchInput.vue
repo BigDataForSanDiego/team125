@@ -11,27 +11,29 @@
 import Session from "@/core/session";
 
 export default {
-  name: "Search",
-  props: {
-    search: {
-      default: false,
-    },
-    search_type: {
-      default: "medicine",
-    },
-  },
+  name: "SearchInput",
   data: () => {
     return {
+      value: "",
+
       _searching: false,
-      search: "",
 
       _session: Session,
     };
   },
   methods: {
-    _onSearchInput: function (search) {
-      console.log(`searching ${this.search_type} for '${search}'...`);
-      this.search = search;
+    search: function (category, search) {
+      this.$router.push({
+        path: "/listing",
+        query: {
+          category: category,
+          search: search,
+        },
+      });
+    },
+
+    _onSearchInput: function (new_value) {
+      this.value = new_value;
     },
 
     _i18n: function (i18n_id) {
