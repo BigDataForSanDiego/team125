@@ -3,11 +3,7 @@
     <Navbar />
 
     <div class="h-100 p-5 d-flex flex-column">
-      <i class="description mt-3 p-4 flex-fill text-center">
-        A Progressive Web Application enabling individuals to compare cost of medication
-        and medical services; while analyzing trends to improve decision making for the
-        consumer and provider.
-      </i>
+      <i class="description mt-3 p-4 flex-fill text-center">{{ _i18n("description") }}</i>
 
       <ul class="m-3 nav nav-pills justify-content-center">
         <li class="px-1 nav-item">
@@ -16,7 +12,7 @@
             :class="{ active: _looking_for == 'medicine' }"
             @click="_setLookingFor('medicine')"
           >
-            Medicine
+            {{ _i18n("medicine") }}
           </a>
         </li>
         <li class="px-1 nav-item">
@@ -25,7 +21,7 @@
             :class="{ active: _looking_for == 'services' }"
             @click="_setLookingFor('services')"
           >
-            Services
+            {{ _i18n("services") }}
           </a>
         </li>
       </ul>
@@ -39,7 +35,7 @@
             id="Search"
             @click="_onCompareClick"
           >
-            Compare
+            {{ _i18n("compare") }}
           </button>
         </div>
       </div>
@@ -49,8 +45,9 @@
           class="btn"
           href="https://github.com/BigDataForSanDiego/team125#2022-big-data-hackathon-proposal-form"
           role="button"
-          >ABOUT US</a
         >
+          {{ _i18n("about") }}
+        </a>
         <a class="btn" href="https://github.com/BigDataForSanDiego/team125" role="button">
           <i class="bi bi-github"></i>
         </a>
@@ -63,6 +60,8 @@
 import Navbar from "@/components/Navbar.vue";
 import Search from "@/components/Search.vue";
 
+import Session from "@/core/session";
+
 export default {
   name: "HomeView",
   components: {
@@ -72,6 +71,8 @@ export default {
   data: function () {
     return {
       _looking_for: "medicine",
+
+      _session: Session,
     };
   },
   methods: {
@@ -86,6 +87,28 @@ export default {
           search: this.$refs.search.search,
         },
       });
+    },
+
+    _i18n: function (i18n_id) {
+      const internationalization = {
+        english: {
+          description:
+            "A Progressive Web Application enabling individuals to compare cost of medication and medical services;while analyzing trends to improve decision making for the consumer and provider.",
+          medicine: "Medicine",
+          services: "Services",
+          compare: "Compare",
+          about: "ABOUT US",
+        },
+        spanish: {
+          description:
+            "Una aplicación web progresiva que permite a las personas comparar el costo de los medicamentos y los servicios médicos; mientras analiza tendencias para mejorar la toma de decisiones para el consumidor y el proveedor.",
+          medicine: "Medicamento",
+          services: "Servicios",
+          compare: "Comparar",
+          about: "SOBRE NOSOTROS",
+        },
+      };
+      return internationalization[this._session.language][i18n_id];
     },
   },
 };
