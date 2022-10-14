@@ -2,8 +2,13 @@
   <nav class="navbar navbar-light bg-light fixed-top">
     <div v-if="_searching" class="container-fluid">
       <div class="input-group">
-        <Search />
-        <button class="btn btn-outline-success" type="button" id="Compare">
+        <SearchInput ref="searchinput" />
+        <button
+          class="btn btn-outline-success"
+          type="button"
+          id="Compare"
+          @click="_onCompareClick"
+        >
           {{ _i18n("compare") }}
         </button>
         <button
@@ -56,14 +61,14 @@
 </template>
 
 <script>
-import Search from "@/components/Search.vue";
+import SearchInput from "@/components/SearchInput.vue";
 
 import Session from "@/core/session";
 
 export default {
   name: "Navbar",
   components: {
-    Search,
+    SearchInput,
   },
   props: {
     search: {
@@ -85,6 +90,12 @@ export default {
       this._searching = false;
     },
 
+    _onCompareClick: function () {
+      this.$refs.searchinput.search(
+        this.$route.query.category,
+        this.$refs.searchinput.value
+      );
+    },
     _onLanguageChange: function (language) {
       Session.set_language(language);
       location.reload();
