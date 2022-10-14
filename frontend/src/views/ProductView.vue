@@ -34,7 +34,9 @@
           {{ selectedVendor.contact_info.telephone }}
         </div>
         <br />
-        <button type="button" class="btn btn-primary">FIND NEAR ME</button>
+        <button type="button" class="btn btn-primary">
+          {{ _i18n("find") }}
+        </button>
       </div>
     </div>
   </div>
@@ -43,6 +45,8 @@
 <script>
 import Navbar from "@/components/Navbar.vue";
 
+import Session from "@/core/session";
+
 export default {
   name: "ProductView",
   components: {
@@ -50,7 +54,6 @@ export default {
   },
   data: function () {
     return {
-      _loading: false,
       result: {
         name_id: "bupropion-xl",
         name: "Bupropion XL",
@@ -70,6 +73,10 @@ export default {
           },
         ],
       },
+
+      _loading: false,
+
+      _session: Session,
     };
   },
   computed: {
@@ -86,7 +93,19 @@ export default {
       this._loading = false;
     }, 3000);
   },
-  methods: {},
+  methods: {
+    _i18n: function (i18n_id) {
+      const internationalization = {
+        english: {
+          find: "FIND NEAR ME",
+        },
+        spanish: {
+          find: "ENCUENTRA CERCA DE MÍ",
+        },
+      };
+      return internationalization[this._session.language][i18n_id];
+    },
+  },
 };
 </script>
 

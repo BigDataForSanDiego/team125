@@ -10,10 +10,17 @@
           </h3>
         </div>
 
-        <select class="form-select m-auto" style="max-width: 192px">
-          <option>Lowest price</option>
-          <option>Home delivery</option>
-        </select>
+        <div class="m-auto">
+          {{ _i18n("sort") }}:
+          <select class="form-select" style="max-width: 192px">
+            <option value="lowest">
+              {{ _i18n("lowest") }}
+            </option>
+            <option value="home">
+              {{ _i18n("home") }}
+            </option>
+          </select>
+        </div>
       </div>
 
       <hr />
@@ -28,8 +35,12 @@
         <div v-else>
           <div v-if="result.length == 0" class="text-center">
             <i class="bi bi-emoji-frown" style="font-size: 128px"></i>
-            <h1>Sorry, nothing found...</h1>
-            <h2>try searching for another name or variant</h2>
+            <h1>
+              {{ _i18n("sorry") }}
+            </h1>
+            <h2>
+              {{ _i18n("try") }}
+            </h2>
           </div>
 
           <div v-else>
@@ -69,7 +80,7 @@
                     <i class="bi bi-currency-dollar"></i>{{ vendor.price }}
                   </div>
                   <button type="button" class="btn btn-primary" @click="_onResultClick">
-                    See more
+                    {{ _i18n("more") }}
                   </button>
                 </div>
               </div>
@@ -83,6 +94,8 @@
 
 <script>
 import Navbar from "@/components/Navbar.vue";
+
+import Session from "@/core/session";
 
 export default {
   name: "ListingView",
@@ -111,6 +124,8 @@ export default {
           },
         ],
       },
+
+      _session: Session,
     };
   },
   mounted: function () {
@@ -127,6 +142,28 @@ export default {
           vendor: "costco",
         },
       });
+    },
+
+    _i18n: function (i18n_id) {
+      const internationalization = {
+        english: {
+          sort: "Sort by",
+          lowest: "Lowest price",
+          home: "Home delivery",
+          sorry: "Sorry, nothing found...",
+          try: "try searching for another name or variant",
+          more: "See more",
+        },
+        spanish: {
+          sort: "Ordenar por",
+          lowest: "Precio bajo",
+          home: "Entrega a domicilio",
+          sorry: "Lo siento, no se encontró nada...",
+          try: "intente buscar otro nombre o variante",
+          more: "Ver más",
+        },
+      };
+      return internationalization[this._session.language][i18n_id];
     },
   },
 };
