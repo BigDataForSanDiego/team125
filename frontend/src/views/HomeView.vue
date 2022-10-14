@@ -9,7 +9,7 @@
         <li class="px-1 nav-item">
           <a
             class="nav-link"
-            :class="{ active: _looking_for == 'medicine' }"
+            :class="{ active: _category == 'medicine' }"
             @click="_setLookingFor('medicine')"
           >
             <i class="bi bi-capsule"></i> {{ _i18n("medicine") }}
@@ -18,7 +18,7 @@
         <li class="px-1 nav-item">
           <a
             class="nav-link"
-            :class="{ active: _looking_for == 'services' }"
+            :class="{ active: _category == 'services' }"
             @click="_setLookingFor('services')"
           >
             <i class="bi bi-hospital"></i> {{ _i18n("services") }}
@@ -39,25 +39,41 @@
           </button>
         </div>
 
-        <div v-if="_looking_for == 'medicine'" class="text-center">
+        <div v-if="_category == 'medicine'" class="text-center">
           {{ _i18n("popular") }} <br />
           <div class="m-1">
-            <button type="button" class="mx-1 btn btn-outline-primary bg-white btn-sm">
+            <button
+              type="button"
+              class="mx-1 btn btn-outline-primary bg-white btn-sm"
+              @click="search(_category, 'omega-3')"
+            >
               Omega-3
             </button>
-            <button type="button" class="btn btn-outline-primary bg-white btn-sm">
+            <button
+              type="button"
+              class="btn btn-outline-primary bg-white btn-sm"
+              @click="search(_category, 'riomet')"
+            >
               Riomet
             </button>
           </div>
         </div>
 
-        <div v-if="_looking_for == 'services'" class="text-center">
+        <div v-if="_category == 'services'" class="text-center">
           {{ _i18n("popular") }}
           <div class="m-1">
-            <button type="button" class="mx-1 btn btn-outline-primary bg-white btn-sm">
+            <button
+              type="button"
+              class="mx-1 btn btn-outline-primary bg-white btn-sm"
+              @click="search(_category, 'covid-19 test')"
+            >
               {{ _i18n("covid") }}
             </button>
-            <button type="button" class="btn btn-outline-primary bg-white btn-sm">
+            <button
+              type="button"
+              class="btn btn-outline-primary bg-white btn-sm"
+              @click="search(_category, 'skin care')"
+            >
               {{ _i18n("skin") }}
             </button>
           </div>
@@ -94,23 +110,27 @@ export default {
   },
   data: function () {
     return {
-      _looking_for: "medicine",
+      _category: "medicine",
 
       _session: Session,
     };
   },
   methods: {
-    _setLookingFor: function (looking_for) {
-      this._looking_for = looking_for;
-    },
-    _onCompareClick: function () {
+    search: function (category, search) {
       this.$router.push({
         path: "/listing",
         query: {
-          search_type: this._looking_for,
-          search: this.$refs.search.search,
+          category: category,
+          search: search,
         },
       });
+    },
+
+    _setLookingFor: function (looking_for) {
+      this._category = looking_for;
+    },
+    _onCompareClick: function () {
+      this.searchMedicine(this._category, this.$refs.search.search);
     },
 
     _i18n: function (i18n_id) {

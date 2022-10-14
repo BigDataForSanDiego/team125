@@ -138,7 +138,7 @@ export default {
       this.$router.push({
         path: "/product",
         query: {
-          search_type: this.$route.query.search_type,
+          category: this.$route.query.category,
           vendor: "costco",
         },
       });
