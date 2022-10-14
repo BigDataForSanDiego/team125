@@ -8,18 +8,19 @@ class VendorSerializer(serializers.ModelSerializer):
         model = Vendor
         fields = "__all__"
 
+
 class MedicineSerializer(serializers.ModelSerializer):
     vendors = serializers.SerializerMethodField()
-    
+
     class Meta:
         model = Medicine
         fields = "__all__"
 
     def get_vendors(self, obj):
         return VendorSerializer(
-            Vendor.objects.filter(vendor_medicine__medicine__name=obj.name),
-            many=True
+            Vendor.objects.filter(vendor_medicine__medicine__name=obj.name), many=True
         )
+
 
 class MedicineSearchSerializer(serializers.ModelSerializer):
     slug_name = serializers.SerializerMethodField()
@@ -27,9 +28,14 @@ class MedicineSearchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Medicine
         fields = ["name"]
-    
+
     def get_slug_name(self, obj):
         return slugify(obj.name)
+
+
+class MedicineInputRx(serializer.ModelSerializer):
+    pass
+
 
 #### MEDICINE SEARCH SERIALIZER
 # [
@@ -58,6 +64,6 @@ class MedicineSearchSerializer(serializers.ModelSerializer):
 #       price: 4.99,
 #   }
 #   …
-#   ]	
+#   ]
 #     …
 # }

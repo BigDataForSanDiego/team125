@@ -1,8 +1,7 @@
-from rest_framework import routers
-from views import medicine, medicines
+from django.urls import path
+from . import views
 
-router = routers.SimpleRouter()
-router.register(r'medicine/<slug:medicine>', medicine)
-router.register(r'medicines/', medicines)
+# router.register(r'medicine/<slug:medicine>', medicine)
+# router.register(r'medicines/', medicines, basename="api-medicines")
 
-urlpatterns = router.urls
+urlpatterns = [path("medicines/", views.medicines)]
