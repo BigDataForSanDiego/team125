@@ -4,7 +4,7 @@
 
     <div class="h-100 p-5 d-flex flex-column">
       <div class="pt-4 d-flex">
-        <div class="flex-fill">
+        <div class="flex-fill mt-4">
           <h3 class="text-capitalize">
             {{ this.$route.query.search }}
           </h3>
@@ -33,7 +33,7 @@
         </div>
 
         <div v-else>
-          <div v-if="result.length == 0" class="text-center">
+          <div v-if="result === null" class="text-center">
             <i class="bi bi-emoji-frown" style="font-size: 128px"></i>
             <h1>
               {{ _i18n("sorry") }}
@@ -52,12 +52,22 @@
                     class="img-fluid rounded-start"
                     alt=""
                     width="64"
+                    height="64"
+                    style="min-width: 64px"
                   />
                 </div>
 
                 <div class="flex-fill">
                   <div class="card-body">
-                    <h5 class="card-title">
+                    <h5
+                      class="card-title"
+                      style="
+                        white-space: nowrap;
+                        overflow: hidden;
+                        width: 100px;
+                        text-overflow: ellipsis;
+                      "
+                    >
                       {{ vendor.vendor_name }}
                       <i v-if="vendor.vendor_delivery" class="bi bi-envelope-check"></i>
                     </h5>
@@ -66,9 +76,9 @@
                     </p>
                     <p class="card-text">
                       <small class="text-muted">
-                        <span v-if="vendor.contact_info.location != ''">
+                        <span v-if="vendor.location != ''">
                           <i class="bi bi-geo-alt"></i>
-                          {{ vendor.contact_info.location }}
+                          {{ vendor.location || "San Diego" }}
                         </span>
                       </small>
                     </p>
@@ -79,7 +89,12 @@
                   <div class="pb-2">
                     <i class="bi bi-currency-dollar"></i>{{ vendor.price }}
                   </div>
-                  <button type="button" class="btn btn-primary" @click="_onResultClick">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="min-width: 95px"
+                    @click="_onResultClick"
+                  >
                     {{ _i18n("more") }}
                   </button>
                 </div>
@@ -104,34 +119,24 @@ export default {
   },
   data: function () {
     return {
-      _loading: false,
-      result: {
-        name_id: "bupropion-xl",
-        name: "Bupropion XL",
-        description: "BUPROPION treats depression",
-        product_image: "img/icons/favicon.svg",
-        vendors: [
-          {
-            vendor_name_id: "costco",
-            vendor_name: "Costco",
-            contact_info: {
-              location: "San Diego, CA",
-              telephone: "+1 (619) 123-4567",
-            },
-            vendor_delivery: true,
-            vendor_image: "img/icons/favicon.svg",
-            price: 4.99,
-          },
-        ],
-      },
+      result: null,
+
+      _loading: true,
 
       _session: Session,
     };
   },
   mounted: function () {
+    if (this.$route.query.search in this._session.medicines) {
+      const medicine = this.$route.query.search;
+
+      console.log(this._session.medicines[medicine]);
+
+      this.result = this._session.medicines[medicine];
+    }
     setTimeout(() => {
       this._loading = false;
-    }, 3000);
+    }, 1500);
   },
   methods: {
     _onResultClick: function () {
