@@ -1,6 +1,9 @@
 from slugify import slugify
 from rest_framework import serializers
-from .models import Medicine
+from .models import (
+    Medicine,
+    Vendor
+)
 
 
 class VendorSerializer(serializers.ModelSerializer):
@@ -23,18 +26,18 @@ class MedicineSerializer(serializers.ModelSerializer):
 
 
 class MedicineSearchSerializer(serializers.ModelSerializer):
-    slug_name = serializers.SerializerMethodField()
+    class Meta:
+        model = Medicine
+        fields = "__all__"
+
+
+class MedicineResponseRx(serializers.ModelSerializer):
+    name = serializers.CharField(source="display")
+    slug_name = serializers.CharField(source="slug")
 
     class Meta:
         model = Medicine
-        fields = ["name"]
-
-    def get_slug_name(self, obj):
-        return slugify(obj.name)
-
-
-class MedicineInputRx(serializer.ModelSerializer):
-    pass
+        fields = "__all__"
 
 
 #### MEDICINE SEARCH SERIALIZER

@@ -2,6 +2,7 @@ import requests
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
+from .serializers import MedicineResponseRx
 
 # GET api/medicine/<product_name_id>/?location=<geolocation>
 @api_view(["GET"])
@@ -19,4 +20,10 @@ def medicines(request):
         f"https://www.goodrx.com/api/v4/search/autocomplete?term={product_name}"
     )
     response_data = response.json()
+    serializer = MedicineResponseRx(
+        data=response_data,
+        many=True
+    )
+    print("SERIALIZER:", serializer)
+
     return Response(data=response_data, status=200)
