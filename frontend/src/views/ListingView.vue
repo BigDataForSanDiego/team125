@@ -12,11 +12,15 @@
 
         <div class="m-auto">
           {{ _i18n("sort") }}:
-          <select class="form-select" style="max-width: 192px">
-            <option value="lowest">
+          <select
+            class="form-select"
+            style="max-width: 192px"
+            @change="_onSortChange($event.target.value)"
+          >
+            <option value="price">
               {{ _i18n("lowest") }}
             </option>
-            <option value="home">
+            <option value="shipping">
               {{ _i18n("home") }}
             </option>
           </select>
@@ -44,7 +48,7 @@
           </div>
 
           <div v-else>
-            <div v-for="vendor in result.vendors" class="card mb-3">
+            <div v-for="vendor in sortedVendors" class="card mb-3">
               <div class="d-flex mx-3">
                 <div class="my-auto">
                   <img
@@ -62,7 +66,7 @@
                   <div class="card-body">
                     <b class="vendor-name">
                       {{ vendor.vendor_name }}
-                      <i v-if="vendor.vendor_delivery" class="bi bi-envelope-check"></i>
+                      <i v-if="vendor.shipping" class="bi bi-envelope-check"></i>
                     </b>
                     <p class="card-text">
                       {{ vendor.description }}
@@ -115,9 +119,20 @@ export default {
       result: null,
 
       _loading: true,
+      _sorting_by: "price",
 
       _session: Session,
     };
+  },
+  computed: {
+    sortedVendors: function () {
+      this.result.vendors.sort((vendor_a, vendor_b) => {
+        if (this._sorting_by == "price") return vendor_a.price > vendor_b.price;
+        else if (this._sorting_by == "shipping")
+          return vendor_b.shipping && vendor_a.price > vendor_b.price;
+      });
+      return this.result.vendors;
+    },
   },
   mounted: function () {
     if (this.$route.query.search in this._session.medicines) {
@@ -130,6 +145,9 @@ export default {
     }, 1000);
   },
   methods: {
+    _onSortChange: function (sort_by) {
+      this._sorting_by = sort_by;
+    },
     _onResultClick: function (vendor) {
       this.$router.push({
         path: "/product",
