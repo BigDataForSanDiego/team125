@@ -87,6 +87,7 @@ export default {
 
     _onLanguageChange: function (language) {
       Session.set_language(language);
+      location.reload();
     },
 
     _i18n: function (i18n_id) {
