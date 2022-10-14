@@ -12,14 +12,12 @@
           {{ _i18n("try") }}
         </h2>
       </div>
-      <div v-else>
-        <div class="h-25 mt-5 p-3 d-flex border">
-          <img :src="result.product_image" class="m-2 rounded-start" alt="" width="128" />
-
-          <div class="p-2 card-body">
-            <h5 class="card-title">{{ result.name }}</h5>
-            <p class="card-text">
-              <small class="text-muted">{{ result.description }}</small>
+      <div v-else class="">
+        <div class="h-25 my-5 m-auto p-2 d-flex border bg-white text-center info">
+          <div class="p-2 bg-white flex-fill">
+            <h5>{{ this.$route.query.search }}</h5>
+            <p>
+              <small class="text-muted">{{ result.description || result.name }}</small>
             </p>
           </div>
         </div>
@@ -29,7 +27,8 @@
             :src="selectedVendor.vendor_image"
             class="rounded mx-auto d-block rounded-circle"
             alt=""
-            width="256"
+            width="192"
+            height="192"
           />
           <h1>{{ selectedVendor.vendor_name }}</h1>
           <h3><i class="bi bi-currency-dollar"></i>{{ selectedVendor.price }}</h3>
@@ -44,9 +43,14 @@
             {{ selectedVendor.telephone }}
           </div>
           <br />
-          <button type="button" class="btn btn-primary">
+          <a
+            v-if="selectedVendor.location != null"
+            :href="'http://maps.google.com/?q=' + selectedVendor.vendor_name"
+            type="button"
+            class="btn btn-primary"
+          >
             <i class="bi bi-geo"></i> {{ _i18n("find") }}
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -67,7 +71,7 @@ export default {
     return {
       result: null,
 
-      _loading: false,
+      _loading: true,
 
       _session: Session,
     };
@@ -82,9 +86,14 @@ export default {
     },
   },
   mounted: function () {
+    if (this.$route.query.search in this._session.medicines) {
+      const medicine = this.$route.query.search;
+
+      this.result = this._session.medicines[medicine];
+    }
     setTimeout(() => {
       this._loading = false;
-    }, 3000);
+    }, 1000);
   },
   methods: {
     _i18n: function (i18n_id) {
@@ -106,4 +115,16 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+@media (min-width: 576px) {
+  .info {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .info {
+    width: 25%;
+  }
+}
+</style>
