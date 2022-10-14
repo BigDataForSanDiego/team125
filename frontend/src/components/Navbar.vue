@@ -38,9 +38,13 @@
         >
           <i class="bi bi-search"></i>
         </button>
-        <select class="form-select">
-          <option>English</option>
-          <option>Español</option>
+        <select
+          class="form-select"
+          id="language"
+          @change="_onLanguageChange($event.target.value)"
+        >
+          <option :selected="_session.language == 'English'">English</option>
+          <option :selected="_session.language == 'Español'">Español</option>
         </select>
       </form>
     </div>
@@ -49,6 +53,8 @@
 
 <script>
 import Search from "@/components/Search.vue";
+
+import Session from "@/core/session";
 
 export default {
   name: "Navbar",
@@ -62,6 +68,7 @@ export default {
   },
   data: () => {
     return {
+      _session: Session,
       _searching: false,
     };
   },
@@ -71,6 +78,9 @@ export default {
     },
     stopSearch: function () {
       this._searching = false;
+    },
+    _onLanguageChange: function (language) {
+      Session.set_language(language);
     },
   },
 };
