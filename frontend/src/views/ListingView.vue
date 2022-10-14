@@ -28,7 +28,7 @@
       <div class="flex-fill">
         <div v-if="_loading" class="m-3 text-center">
           <div class="spinner-border" style="width: 128px; height: 128px">
-            <span class="visually-hidden">Loading...</span>
+            <span class="visually-hidden">{{ _i18n("loading") }}</span>
           </div>
         </div>
 
@@ -51,26 +51,18 @@
                     :src="vendor.vendor_image"
                     class="img-fluid rounded-start"
                     alt=""
-                    width="64"
-                    height="64"
-                    style="min-width: 64px"
+                    width="32"
+                    height="32"
+                    style="min-width: 32px"
                   />
                 </div>
 
                 <div class="flex-fill">
                   <div class="card-body">
-                    <h5
-                      class="card-title"
-                      style="
-                        white-space: nowrap;
-                        overflow: hidden;
-                        width: 100px;
-                        text-overflow: ellipsis;
-                      "
-                    >
+                    <b class="vendor-name">
                       {{ vendor.vendor_name }}
                       <i v-if="vendor.vendor_delivery" class="bi bi-envelope-check"></i>
-                    </h5>
+                    </b>
                     <p class="card-text">
                       {{ vendor.description }}
                     </p>
@@ -78,7 +70,7 @@
                       <small class="text-muted">
                         <span v-if="vendor.location != ''">
                           <i class="bi bi-geo-alt"></i>
-                          {{ vendor.location || "San Diego" }}
+                          {{ vendor.location || "San Diego, CA" }}
                         </span>
                       </small>
                     </p>
@@ -158,6 +150,7 @@ export default {
           sorry: "Sorry, nothing found...",
           try: "try searching for another name or variant",
           more: "See more",
+          loading: "Loading...",
         },
         spanish: {
           sort: "Ordenar por",
@@ -166,6 +159,7 @@ export default {
           sorry: "Lo siento, no se encontró nada...",
           try: "intente buscar otro nombre o variante",
           more: "Ver más",
+          loading: "Cargando...",
         },
       };
       return internationalization[this._session.language][i18n_id];
@@ -174,4 +168,21 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.vendor-name {
+  display: block;
+  width: 95px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 576px) {
+  .vendor-name {
+    white-space: initial !important;
+    overflow: initial !important;
+    width: initial !important;
+    text-overflow: initial !important;
+  }
+}
+</style>
