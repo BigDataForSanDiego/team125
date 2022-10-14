@@ -35,7 +35,7 @@
         </div>
         <br />
         <button type="button" class="btn btn-primary">
-          {{ _i18n("find") }}
+          <i class="bi bi-geo"></i> {{ _i18n("find") }}
         </button>
       </div>
     </div>

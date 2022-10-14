@@ -12,7 +12,7 @@
             :class="{ active: _looking_for == 'medicine' }"
             @click="_setLookingFor('medicine')"
           >
-            {{ _i18n("medicine") }}
+            <i class="bi bi-capsule"></i> {{ _i18n("medicine") }}
           </a>
         </li>
         <li class="px-1 nav-item">
@@ -21,7 +21,7 @@
             :class="{ active: _looking_for == 'services' }"
             @click="_setLookingFor('services')"
           >
-            {{ _i18n("services") }}
+            <i class="bi bi-hospital"></i> {{ _i18n("services") }}
           </a>
         </li>
       </ul>
