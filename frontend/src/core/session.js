@@ -60,7 +60,7 @@ function Session() {
                 {
                     id: 3,
                     vendor_name: "CVS Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-425-1910",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -69,7 +69,7 @@ function Session() {
                 {
                     id: 4,
                     vendor_name: "Costco",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: " +1 858-270-6920",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
@@ -78,7 +78,7 @@ function Session() {
                 {
                     id: 5,
                     vendor_name: "Vons Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-428-3311",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -113,7 +113,7 @@ function Session() {
                 {
                     id: 3,
                     vendor_name: "CVS Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-425-1910",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -122,7 +122,7 @@ function Session() {
                 {
                     id: 4,
                     vendor_name: "Costco",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: " +1 858-270-6920",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
@@ -131,7 +131,7 @@ function Session() {
                 {
                     id: 5,
                     vendor_name: "Vons Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-428-3311",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -166,7 +166,7 @@ function Session() {
                 {
                     id: 3,
                     vendor_name: "CVS Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-425-1910",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -175,7 +175,7 @@ function Session() {
                 {
                     id: 4,
                     vendor_name: "Costco",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: " +1 858-270-6920",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
@@ -184,7 +184,7 @@ function Session() {
                 {
                     id: 5,
                     vendor_name: "Vons Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-428-3311",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -219,7 +219,7 @@ function Session() {
                 {
                     id: 3,
                     vendor_name: "CVS Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-425-1910",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -228,7 +228,7 @@ function Session() {
                 {
                     id: 4,
                     vendor_name: "Costco",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: " +1 858-270-6920",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
@@ -237,7 +237,7 @@ function Session() {
                 {
                     id: 5,
                     vendor_name: "Vons Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-428-3311",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -272,7 +272,7 @@ function Session() {
                 {
                     id: 3,
                     vendor_name: "CVS Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-425-1910",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -281,7 +281,7 @@ function Session() {
                 {
                     id: 4,
                     vendor_name: "Costco",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: " +1 858-270-6920",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
@@ -290,7 +290,7 @@ function Session() {
                 {
                     id: 5,
                     vendor_name: "Vons Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-428-3311",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -325,7 +325,7 @@ function Session() {
                 {
                     id: 3,
                     vendor_name: "CVS Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-425-1910",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -334,7 +334,7 @@ function Session() {
                 {
                     id: 4,
                     vendor_name: "Costco",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: " +1 858-270-6920",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
@@ -343,7 +343,7 @@ function Session() {
                 {
                     id: 5,
                     vendor_name: "Vons Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-428-3311",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -378,7 +378,7 @@ function Session() {
                 {
                     id: 3,
                     vendor_name: "CVS Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-425-1910",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -387,7 +387,7 @@ function Session() {
                 {
                     id: 4,
                     vendor_name: "Costco",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: " +1 858-270-6920",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
@@ -396,7 +396,7 @@ function Session() {
                 {
                     id: 5,
                     vendor_name: "Vons Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-428-3311",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -431,7 +431,7 @@ function Session() {
                 {
                     id: 3,
                     vendor_name: "CVS Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-425-1910",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -440,7 +440,7 @@ function Session() {
                 {
                     id: 4,
                     vendor_name: "Costco",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: " +1 858-270-6920",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
@@ -449,7 +449,7 @@ function Session() {
                 {
                     id: 5,
                     vendor_name: "Vons Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-428-3311",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -484,7 +484,7 @@ function Session() {
                 {
                     id: 3,
                     vendor_name: "CVS Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-425-1910",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -493,7 +493,7 @@ function Session() {
                 {
                     id: 4,
                     vendor_name: "Costco",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: " +1 858-270-6920",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
@@ -502,7 +502,7 @@ function Session() {
                 {
                     id: 5,
                     vendor_name: "Vons Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-428-3311",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -537,7 +537,7 @@ function Session() {
                 {
                     id: 3,
                     vendor_name: "CVS Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-425-1910",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -546,7 +546,7 @@ function Session() {
                 {
                     id: 4,
                     vendor_name: "Costco",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: " +1 858-270-6920",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
@@ -555,7 +555,7 @@ function Session() {
                 {
                     id: 5,
                     vendor_name: "Target",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-428-3311",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/6.png",
@@ -590,7 +590,7 @@ function Session() {
                 {
                     id: 3,
                     vendor_name: "CVS Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-425-1910",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -599,7 +599,7 @@ function Session() {
                 {
                     id: 4,
                     vendor_name: "Costco",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: " +1 858-270-6920",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
@@ -608,7 +608,7 @@ function Session() {
                 {
                     id: 5,
                     vendor_name: "Vons Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-428-3311",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -643,7 +643,7 @@ function Session() {
                 {
                     id: 3,
                     vendor_name: "CVS Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-425-1910",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -652,7 +652,7 @@ function Session() {
                 {
                     id: 4,
                     vendor_name: "Costco",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: " +1 858-270-6920",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
@@ -661,7 +661,7 @@ function Session() {
                 {
                     id: 5,
                     vendor_name: "Vons Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-428-3311",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -696,7 +696,7 @@ function Session() {
                 {
                     id: 3,
                     vendor_name: "CVS Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-425-1910",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -705,7 +705,7 @@ function Session() {
                 {
                     id: 4,
                     vendor_name: "Costco",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: " +1 858-270-6920",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
@@ -714,7 +714,7 @@ function Session() {
                 {
                     id: 5,
                     vendor_name: "Vons Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-428-3311",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -749,7 +749,7 @@ function Session() {
                 {
                     id: 3,
                     vendor_name: "CVS Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-425-1910",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -758,7 +758,7 @@ function Session() {
                 {
                     id: 4,
                     vendor_name: "Costco",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: " +1 858-270-6920",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
@@ -767,7 +767,7 @@ function Session() {
                 {
                     id: 5,
                     vendor_name: "Vons Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-428-3311",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -802,7 +802,7 @@ function Session() {
                 {
                     id: 3,
                     vendor_name: "CVS Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-425-1910",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -811,7 +811,7 @@ function Session() {
                 {
                     id: 4,
                     vendor_name: "Costco",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: " +1 858-270-6920",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
@@ -820,7 +820,7 @@ function Session() {
                 {
                     id: 5,
                     vendor_name: "Vons Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-428-3311",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -855,7 +855,7 @@ function Session() {
                 {
                     id: 3,
                     vendor_name: "CVS Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-425-1910",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
@@ -864,7 +864,7 @@ function Session() {
                 {
                     id: 4,
                     vendor_name: "Costco",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: " +1 858-270-6920",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/31240.png",
@@ -873,7 +873,7 @@ function Session() {
                 {
                     id: 5,
                     vendor_name: "Vons Pharmacy",
-                    location: "San Diego, California",
+                    location: "San Diego, CA",
                     shipping: false,
                     telephone: "+1 619-428-3311",
                     vendor_image: "https://www.grxstatic.com/pharmacy_logos/circle_icon/2.png",
