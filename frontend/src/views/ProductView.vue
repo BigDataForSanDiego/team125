@@ -3,40 +3,51 @@
     <Navbar />
 
     <div class="h-100 p-5 d-flex flex-column">
-      <div class="h-25 mt-5 p-3 d-flex border">
-        <img :src="result.product_image" class="m-2 rounded-start" alt="" width="128" />
-
-        <div class="p-2 card-body">
-          <h5 class="card-title">{{ result.name }}</h5>
-          <p class="card-text">
-            <small class="text-muted">{{ result.description }}</small>
-          </p>
-        </div>
+      <div v-if="result === null" class="text-center">
+        <i class="bi bi-emoji-frown" style="font-size: 128px"></i>
+        <h1>
+          {{ _i18n("sorry") }}
+        </h1>
+        <h2>
+          {{ _i18n("try") }}
+        </h2>
       </div>
+      <div v-else>
+        <div class="h-25 mt-5 p-3 d-flex border">
+          <img :src="result.product_image" class="m-2 rounded-start" alt="" width="128" />
 
-      <div class="p-3 text-center">
-        <img
-          :src="selectedVendor.vendor_image"
-          class="rounded mx-auto d-block rounded-circle"
-          alt=""
-          width="256"
-        />
-        <h1>{{ selectedVendor.vendor_name }}</h1>
-        <h3><i class="bi bi-currency-dollar"></i>{{ selectedVendor.price }}</h3>
+          <div class="p-2 card-body">
+            <h5 class="card-title">{{ result.name }}</h5>
+            <p class="card-text">
+              <small class="text-muted">{{ result.description }}</small>
+            </p>
+          </div>
+        </div>
 
-        <div v-if="selectedVendor.contact_info.location != ''">
-          <i class="bi bi-geo-alt"></i>
-          {{ selectedVendor.contact_info.location }}
+        <div class="p-3 text-center">
+          <img
+            :src="selectedVendor.vendor_image"
+            class="rounded mx-auto d-block rounded-circle"
+            alt=""
+            width="256"
+          />
+          <h1>{{ selectedVendor.vendor_name }}</h1>
+          <h3><i class="bi bi-currency-dollar"></i>{{ selectedVendor.price }}</h3>
+
+          <div v-if="selectedVendor.location != ''">
+            <i class="bi bi-geo-alt"></i>
+            {{ selectedVendor.location || "San Diego, CA" }}
+          </div>
+          <br />
+          <div v-if="selectedVendor.telephone != ''">
+            <i class="bi bi-telephone"></i>
+            {{ selectedVendor.telephone }}
+          </div>
+          <br />
+          <button type="button" class="btn btn-primary">
+            <i class="bi bi-geo"></i> {{ _i18n("find") }}
+          </button>
         </div>
-        <br />
-        <div v-if="selectedVendor.contact_info.telephone != ''">
-          <i class="bi bi-telephone"></i>
-          {{ selectedVendor.contact_info.telephone }}
-        </div>
-        <br />
-        <button type="button" class="btn btn-primary">
-          <i class="bi bi-geo"></i> {{ _i18n("find") }}
-        </button>
       </div>
     </div>
   </div>
@@ -54,25 +65,7 @@ export default {
   },
   data: function () {
     return {
-      result: {
-        name_id: "bupropion-xl",
-        name: "Bupropion XL",
-        description: "BUPROPION treats depression",
-        product_image: "img/icons/favicon.svg",
-        vendors: [
-          {
-            vendor_name_id: "costco",
-            vendor_name: "Costco",
-            contact_info: {
-              location: "San Diego, CA",
-              telephone: "+1 (619) 123-4567",
-            },
-            vendor_delivery: true,
-            vendor_image: "img/icons/favicon.svg",
-            price: 4.99,
-          },
-        ],
-      },
+      result: null,
 
       _loading: false,
 
@@ -98,9 +91,13 @@ export default {
       const internationalization = {
         english: {
           find: "FIND NEAR ME",
+          sorry: "Sorry, nothing found...",
+          try: "try searching for another name or variant",
         },
         spanish: {
           find: "ENCUENTRA CERCA DE MÍ",
+          sorry: "Lo siento, no se encontró nada...",
+          try: "intente buscar otro nombre o variante",
         },
       };
       return internationalization[this._session.language][i18n_id];
