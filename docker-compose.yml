@@ -11,6 +11,10 @@ services:
       - "8000:8000"
     volumes:
       - ./backend:/usr/src/backend/
+    networks:
+      static-network:
+        ipv4_address: 172.23.0.3
+
 
   frontend:
     build:
@@ -23,5 +27,12 @@ services:
     volumes:
       - /usr/src/frontend/node_modules
       - ./frontend:/usr/src/frontend/
-    depends_on:
-      - backend
+    networks:
+      static-network:
+        ipv4_address: 172.23.0.2
+
+networks:
+  static-network:
+    ipam:
+      config:
+        - subnet: 172.23.0.0/16
