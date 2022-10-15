@@ -48,7 +48,7 @@
           </div>
 
           <div v-else>
-            <div v-for="vendor in sortedVendors" class="card mb-3">
+            <div v-for="vendor in sortedVendors" :key="vendor.vendor_name" class="card mb-3">
               <div class="d-flex mx-3">
                 <div class="my-auto">
                   <img
@@ -126,12 +126,10 @@ export default {
   },
   computed: {
     sortedVendors: function () {
-      this.result.vendors.sort((vendor_a, vendor_b) => {
-        if (this._sorting_by == "price") return vendor_a.price > vendor_b.price;
-        else if (this._sorting_by == "shipping")
-          return vendor_b.shipping && vendor_a.price > vendor_b.price;
+      return this.result.vendors.sort((vendor_a, vendor_b) => {
+        if (this._sorting_by == "price") return vendor_a.price - vendor_b.price;
+        else if (this._sorting_by == "shipping") return vendor_b.shipping - vendor_a.shipping;
       });
-      return this.result.vendors;
     },
   },
   mounted: function () {
