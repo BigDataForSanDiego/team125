@@ -4,6 +4,8 @@ WORKDIR /usr/src/backend
 
 COPY . . 
 
+RUN apk --no-cache add curl chromium-chromedriver 
+
 RUN pip install -r requirements.txt
 
 EXPOSE 8000

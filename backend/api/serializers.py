@@ -19,10 +19,10 @@ class MedicineSerializer(serializers.ModelSerializer):
         model = Medicine
         fields = "__all__"
 
-    def get_vendors(self, obj):
+    def get_vendors(self, medicine):
         return VendorSerializer(
-            Vendor.objects.filter(vendor_medicine__medicine__name=obj.name), many=True
-        )
+            Vendor.objects.filter(vendormedicine__medicine=medicine), many=True
+        ).data
 
 
 class MedicineSearchSerializer(serializers.ModelSerializer):
@@ -31,19 +31,27 @@ class MedicineSearchSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class MedicineResponseRx(serializers.ModelSerializer):
-    name = serializers.CharField(source="display")
-    slug_name = serializers.CharField(source="slug")
+class MedicineResponseRx(serializers.Serializer):
+    display = serializers.CharField()
+    slug = serializers.CharField()
+    type = serializers.CharField()
 
-    class Meta:
-        model = Medicine
-        fields = "__all__"
+    def create(self, validated_data):
+        if validated_data["type"] != "DRUG":
+            return
+        data = {
+            "name": validated_data["display"],
+            "slug_name": validated_data["slug"] 
+        }
+        if Medicine.objects.filter(name=data["name"]).exists():
+            return
+        return Medicine.objects.create(**data)
 
 
-#### MEDICINE SEARCH SERIALIZER
+#### MEDICINES SEARCH SERIALIZER
 # [
 #   {
-#       name_id: ”bupropion-xl”
+#       slug_name: ”bupropion-xl”
 #       name: “Bupropion XL”,
 #   },
 #   …

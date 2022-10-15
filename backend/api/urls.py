@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-# router.register(r'medicine/<slug:medicine>', medicine)
-# router.register(r'medicines/', medicines, basename="api-medicines")
-
-urlpatterns = [path("medicines/", views.medicines)]
+urlpatterns = [
+    path("medicines/", views.medicines),
+    path("medicine/<slug:slug_name>", views.medicine)
+]
