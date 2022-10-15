@@ -20,6 +20,7 @@ class Vendor(models.Model):
 class VendorMedicine(models.Model):
     medicine = models.ForeignKey("Medicine", on_delete=models.CASCADE)
     vendor = models.ForeignKey("Vendor", on_delete=models.CASCADE)
+    shipping = models.BooleanField(default=True)
     price = models.DecimalField(max_digits=7, decimal_places=2,)
 
     class Meta:
