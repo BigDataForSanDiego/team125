@@ -61,7 +61,7 @@ def medicine(request, slug_name):
     # scrap vendor + vendor medicine. TODO: scrap price.
     try:
         browser.get(f"https://www.google.com/search?q={medicine.slug_name}+drug&tbm=shop")
-        vendor_element = browser.find_element(By.CSS_SELECTOR, "span[data-sh-gr='os']")
+        vendor_element = browser.find_element(By.CSS_SELECTOR, "span[data-sh-gr='os'] div.aULzUe")
         vendor_name = vendor_element.text
 
         browser.get(f"https://www.google.com/search?q={vendor_name}company&tbm=isch&tbs=isz:i")
