@@ -132,7 +132,8 @@ export default {
       });
     },
   },
-  mounted: function () {
+  mounted: async function () {
+    // TODO: replace results with api/response/<medicine>
     if (this.$route.query.search in this._session.medicines) {
       const medicine = this.$route.query.search;
 
