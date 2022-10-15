@@ -4,22 +4,22 @@
     class="form-control"
     :placeholder="_i18n('search')"
     @input="_onSearchInput($event.target.value)"
+    @keyup="autoComplete"
   />
-  <div class="dropdown-menu">
+  <div class="dropdown-menu mt-5 w-100" :class="dropdownClass">
     <i class="hasNoResults">No matching results</i>
     <div class="list-autocomplete">
-      <button v-for="medicine in fetchedMedicines" :key="medicine.slug_name" type="button" class="dropdown-item" >
+      <button v-for="medicine in fetchedMedicines" :key="medicine.slug_name" type="button" class="dropdown-item">
           {{ medicine.name }}
       </button>
-        <!--<button type="button" class="dropdown-item">Medicine Name (medicine slug name)</button>-->
     </div>
-    <button type="button" class="btn-extra">Custom button</button>
   </div>
 </template>
 
 <script>
 import Session from "@/core/session";
 import { getMedicines } from "@/endpoints/medicines";
+import "@/css/search-bar.css";
 
 export default {
   name: "SearchInput",
@@ -27,15 +27,18 @@ export default {
     return {
       value: "",
 
+      fetchedMedicines: [],
+
       _searching: false,
 
       _session: Session,
+      
+      dropdownClass: ""
+
     };
   },
-  computed: {
-    fetchedMedicines:  async function() {
-      console.log(await getMedicines(this.value))
-    }
+  created() {
+    this.autoComplete();
   },
   methods: {
     search: function (category, search) {
@@ -48,9 +51,16 @@ export default {
       });
     },
 
+    autoComplete: function(){
+      if (this.value == ""){
+        this.fetchedMedicines = []
+        this.dropdownClass = ""
+      }
+      getMedicines(this.value).then((response) => {this.fetchedMedicines = response.data; this.dropdownClass = "show"})
+    },
+
     _onSearchInput: function (new_value) {
       this.value = new_value;
-      fetchedMedicines
     },
 
     _i18n: function (i18n_id) {
